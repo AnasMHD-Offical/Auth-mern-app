@@ -10,7 +10,7 @@ const signupValidation = (req, res, next) => {
     const { error } = Schema.validate(req.body)
     if (error) {
         return res.status(400)
-            .json({ message: "Bad Request", error })
+            .json({ message: "Bad Request", success:false ,error})
     }
 
     // error && (res.status(400).json({message:"Bad request" , error}))
